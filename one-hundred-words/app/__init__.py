@@ -1,7 +1,7 @@
 
 from flask import Flask
 
-import handlers
+from . import handlers
 
 app = Flask(__name__)
 
