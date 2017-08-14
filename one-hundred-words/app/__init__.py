@@ -1,12 +1,13 @@
 
-from flask import Flask
+import flask
 
 from . import handlers
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 routes = [
-	('/', 'index', handlers.index, ['GET', 'POST']),
+	('/', 'index', handlers.index, ['GET']),
+	('/forms/content', 'post_content', handlers.content_form, ['POST'])
 ]
 
 for path, endpoint, handler, methods in routes:
