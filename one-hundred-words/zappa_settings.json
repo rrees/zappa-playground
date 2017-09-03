@@ -1,10 +1,11 @@
 {
     "dev": {
-        "app_function": "app.app",
+        "app_function": "app.application.app",
         "aws_region": "eu-west-1",
         "profile_name": "default",
         "s3_bucket": "zappa-deployments-rrees",
         "keep_warm": false,
-        "http_methods": ["GET", "POST"]
+        "http_methods": ["GET", "POST"],
+        "integration_response_codes": [200, 302]
     }
 }
